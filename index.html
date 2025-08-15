@@ -18,19 +18,18 @@
 
   <style>
     :root{
-      --bg1:#f8b3ff; /* lighter pink */
-      --bg2:#c6a5ff; /* lighter purple */
+      --bg1:#fcb8d2; /* soft pink */
+      --bg2:#d4b4ff; /* soft purple */
       --text:#1f1f1f;
       --muted:#6b7280;
       --card:#ffffff;
-      --accent:#fff;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
       color:var(--text);
-      background:linear-gradient(135deg,var(--bg1),var(--bg2)) fixed;
+      background:linear-gradient(160deg,var(--bg1) 65%,var(--bg2)) fixed;
     }
     a{color:#ffffff;text-decoration:none}
     header{
@@ -41,6 +40,8 @@
       place-items:center;
       text-align:center;
       overflow:hidden;
+      margin-bottom: 40px; /* extra space below header */
+      border-bottom: 6px solid white; /* clean transition line */
     }
     header::before{
       content:"";
@@ -71,11 +72,15 @@
       border:1px solid rgba(255,255,255,.35);
       color:#fff;
       font-weight:600;
-      transition:transform .15s ease, opacity .15s ease;
+      transition:transform .15s ease, opacity .15s ease, background-color .2s ease;
     }
-    .cta:hover{transform:translateY(-2px); opacity:.95}
+    .cta:hover{
+      transform:translateY(-2px);
+      opacity:.95;
+      background-color: rgba(255,255,255,.3);
+    }
 
-    main{max-width:1100px; margin:-40px auto 60px; padding:0 1rem}
+    main{max-width:1100px; margin:0 auto 60px; padding:0 1rem}
     .card{
       background:var(--card);
       border-radius:18px;
@@ -104,10 +109,14 @@
     }
     input:focus{border-color:#c084fc; box-shadow:0 0 0 4px rgba(192,132,252,.2)}
     .btn{
-      background:linear-gradient(135deg,#f8b3ff,#c6a5ff);
+      background:linear-gradient(135deg,#fcb8d2,#d4b4ff);
       color:#fff; font-weight:700; cursor:pointer; border:none;
+      transition: all 0.2s ease;
     }
-    .btn:hover{opacity:.95}
+    .btn:hover{
+      opacity:.95;
+      transform:translateY(-2px);
+    }
     .btn:active{transform:translateY(1px)}
     .stack{display:grid; gap:12px}
     .footer{
@@ -170,7 +179,6 @@
           <label for="movein">Move-In Date:</label>
           <input id="movein" name="movein" type="date" required>
         </div>
-        <!-- Required: button text + class -->
         <button type="submit" class="btn contact-us-submit-123">Submit</button>
       </form>
     </section>
