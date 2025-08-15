@@ -1,200 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Denisse Square Apartments</title>
-  <meta name="description" content="Modern living at Denisse Square Apartments." />
-HTML
-  <!-- Google Tag Manager (placeholder) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTM Practice Site</title>
+
+  <!-- Google Tag Manager -->
   <script>
-    // Replace GTM-XXXXXXX with your real container ID AFTER you get the live URL
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');
+    })(window,document,'script','dataLayer','GTM-KL4V5V6S');
   </script>
   <!-- End Google Tag Manager -->
 
   <style>
-    :root{
-      --bg1:#ff6ec7; /* pink */
-      --bg2:#8a2be2; /* purple */
-      --text:#1f1f1f;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --accent:#fff;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
-      color:var(--text);
-      background:linear-gradient(135deg,var(--bg1),var(--bg2)) fixed;
+    header {
+      background: linear-gradient(135deg, #d8b4f8, #f9c0d7); /* lighter pastel purple & pink */
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    a{color:#ffffff;text-decoration:none}
-    header{
-      position:relative;
-      color:#fff;
-      min-height:70vh;
-      display:grid;
-      place-items:center;
-      text-align:center;
-      overflow:hidden;
+    h1 {
+      margin: 0;
+      font-size: 2rem;
     }
-    header::before{
-      content:"";
-      position:absolute; inset:0;
-      background:url("images/cortland_peterson_330_rotator_1-0c91228170c5b2582ada616f0f0a69b3.jpg") center/cover no-repeat;
-      filter:brightness(0.6);
-      z-index:0;
+    .buttons {
+      margin-top: 1rem;
     }
-    header .inner{
-      position:relative; z-index:1;
-      padding:3rem 1rem;
-      max-width:1100px; width:100%;
+    .button-link {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      margin: 0.3rem;
+      background-color: white;
+      color: #6a1b9a; /* purple text */
+      border-radius: 5px;
+      border: 2px solid #6a1b9a;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
     }
-    .title{
-      font-size:clamp(2rem,5vw,3.2rem);
-      line-height:1.1; margin:0 0 0.5rem;
+    .button-link:hover {
+      background-color: #f3e5f5;
     }
-    .subtitle{opacity:.9; margin:.25rem 0 1.25rem}
-    .cta-row{
-      display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap;
+    main {
+      padding: 1.5rem;
+      text-align: center;
     }
-    .cta{
-      display:inline-block;
-      padding:.85rem 1.1rem;
-      border-radius:999px;
-      background:rgba(255,255,255,.15);
-      backdrop-filter: blur(6px);
-      border:1px solid rgba(255,255,255,.35);
-      color:#fff;
-      font-weight:600;
-      transition:transform .15s ease, opacity .15s ease;
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 0.5rem 0;
+      border-radius: 8px;
     }
-    .cta:hover{transform:translateY(-2px); opacity:.95}
-
-    main{max-width:1100px; margin:-40px auto 60px; padding:0 1rem}
-    .card{
-      background:var(--card);
-      border-radius:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,.12);
-      padding:1.25rem;
-      margin-bottom:22px;
-    }
-    .grid{
-      display:grid; gap:14px;
-      grid-template-columns:repeat(12,1fr);
-    }
-    .grid .col-12{grid-column:span 12}
-    @media (min-width:768px){
-      .grid .col-6{grid-column:span 6}
-    }
-    img.resp{width:100%; height:420px; object-fit:cover; border-radius:14px}
-    h2{margin:.25rem 0 0.75rem; font-size:1.6rem}
-    label{display:block; font-weight:600; margin:.75rem 0 .35rem}
-    input,button,select{
-      font:inherit;
-      padding:.75rem .9rem;
-      border:1px solid #e5e7eb;
-      border-radius:12px;
-      width:100%;
-      outline:none;
-    }
-    input:focus{border-color:#c084fc; box-shadow:0 0 0 4px rgba(192,132,252,.2)}
-    .btn{
-      background:linear-gradient(135deg,#ff7ad9,#a855f7);
-      color:#fff; font-weight:700; cursor:pointer; border:none;
-    }
-    .btn:hover{opacity:.95}
-    .btn:active{transform:translateY(1px)}
-    .stack{display:grid; gap:12px}
-    .footer{
-      text-align:center; color:#fff; padding:24px 12px 38px; font-weight:600;
-    }
-    .footer small{opacity:.9}
-    .section-title{
-      display:flex; align-items:center; gap:.6rem; margin:0 0 .6rem; color:#6b21a8;
-    }
-    .muted{color:var(--muted)}
-    /* Utility */
-    .center{text-align:center}
-    .spacer{height:8px}
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript placeholder) -->
+  <!-- Google Tag Manager (noscript) -->
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL4V5V6S" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <header>
-    <div class="inner">
-      <h1 class="title">Denisse Square Apartments</h1>
-      <p class="subtitle">Modern comfort, thoughtful design, and amenities you’ll love.</p>
-      <div class="cta-row">
-        <!-- Click to Call link (no class) -->
-        <a href="tel:4794227166">📞 Click to Call</a>
-        <!-- Email link -->
-        <a class="cta" href="mailto:campaignteam@intrinsicdigital.com">✉️ Email Us</a>
-      </div>
+    <h1>Welcome to My GTM Practice Site</h1>
+    <div class="buttons">
+      <a href="tel:+1234567890" class="button-link">📞 Click to Call</a>
+      <a href="mailto:example@email.com" class="button-link">📧 Email Us</a>
     </div>
   </header>
 
   <main>
-    <!-- Gallery -->
-    <section class="card">
-      <h2 class="section-title">Gallery</h2>
-      <div class="grid">
-        <div class="col-12">
-          <img class="resp" src="images/28-print-Ella-View-2406-018-virtually-staged-ff31774baf9d0b1431f5dc4b6da66532.jpeg" alt="Bedroom at Denisse Square Apartments">
-        </div>
-        <div class="col-6">
-          <img class="resp" src="images/16-print-Ella-View-2406-012-virtually-staged-66ebfcc0a9311263da3511103d22e1f8.jpg" alt="Kitchen at Denisse Square Apartments">
-        </div>
-        <div class="col-6">
-          <img class="resp" src="images/9-print-Ella-View-2406-007-virtually-staged-1fbeb2b85d14dec303f4918fd6faa16e.jpg" alt="Living room at Denisse Square Apartments">
-        </div>
-      </div>
-      <p class="muted center">First image shown at top is the hero (Cortland) photo.</p>
-    </section>
-
-    <!-- Contact Form (mock) -->
-    <section class="card">
-      <h2 class="section-title">Contact Us</h2>
-      <form id="contact-form" class="stack" onsubmit="event.preventDefault(); alert('Form submitted (mock).');">
-        <div>
-          <label for="name">Name:</label>
-          <input id="name" name="name" type="text" placeholder="Your full name" required>
-        </div>
-        <div>
-          <label for="address">Address:</label>
-          <input id="address" name="address" type="text" placeholder="Current address">
-        </div>
-        <div>
-          <label for="movein">Move-In Date:</label>
-          <input id="movein" name="movein" type="date" required>
-        </div>
-        <!-- Required: button text + class -->
-        <button type="submit" class="btn contact-us-submit-123">Submit</button>
-      </form>
-    </section>
-
-    <!-- Apply Section -->
-    <section class="card center">
-      <h2 class="section-title" style="justify-content:center">Ready to apply?</h2>
-      <p class="muted">Kick off your application in a few clicks.</p>
-      <button class="btn apply-now-yay" type="button" onclick="alert('Apply flow (mock)')">Apply Now</button>
-      <div class="spacer"></div>
-    </section>
+    <img src="images/cortland_peterson_330_rotator_1-0c91228170c5b2582ada616f0f0a69b3.jpg" alt="Hero Image">
+    <img src="images/16-print-Ella-View-2406-012-virtually-staged-66ebfcca9311263da3511103d22e1f8.jpg" alt="Gallery Image 1">
+    <img src="images/28-print-Ella-View-2406-018-virtually-staged-ff31774baf9d0b1431f5dc4b6da66532.jpg" alt="Gallery Image 2">
+    <img src="images/9-print-Ella-View-2406-007-virtually-staged-1fbeb2b85d14dec303f4918fd6faa16e.jpg" alt="Gallery Image 3">
   </main>
-
-  <footer class="footer">
-    <small>Madison Property Management</small>
-  </footer>
 </body>
 </html>
